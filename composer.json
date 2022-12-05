@@ -1,0 +1,46 @@
+{
+    "name": "onepage/onepage-laravel-approval",
+    "description": "Onepage CMS laravel approval",
+    "keywords": [
+        "approval"
+    ],
+    "type": "package",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/console": "^7.0|^8.0|^9.0",
+        "illuminate/database": "^7.0|^8.0|^9.0",
+        "illuminate/filesystem": "^7.0|^8.0|^9.0",
+        "nmknmk666/l5-repository": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "mockery/mockery": "^1.0",
+        "orchestra/testbench": "^5.0|^6.0|^7.0",
+        "laravel/legacy-factories": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Onepage\\Approval\\": "src/"
+        }
+    },
+    "suggest": {
+        "laravelista/lumen-vendor-publish": "Needed to publish the package configuration in Lumen"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "v13-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Onepage\\Approval\\ApprovalServiceProvider"
+            ],
+            "aliases": {
+                "ApprovalStatusServices": "Onepage\\Approval\\Facades\\ApprovalStatusServices"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
